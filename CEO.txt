@@ -1,0 +1,10 @@
+Optimizacion del SEO.
+
+Inclusion en codigo HTML de:
+    <meta name="Keywords" content="Abogado, Abogados, Keilis, Zarate, Buenos Aires">
+    <meta name="Description" content="Abogados Abogados en Zarate, necesito un abogado">
+
+Uso en Body de etiqueta H1, una sola en todo el archivo.
+
+Para futuras entregas utlizare cloudinary.
+

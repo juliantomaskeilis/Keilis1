@@ -1,0 +1,354 @@
+* {
+    background-color: rgb(70, 120, 122);
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+}
+
+.keilis {
+    display: flex-box;
+    justify-content: right;
+    padding-right: 10px;
+    color: whitesmoke;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(56, 175, 199, 1) 100%);
+}
+
+.menu {
+    display: flexbox;
+    color: whitesmoke;
+    margin-bottom: 15px;
+}
+
+.menus {
+    display: flexbox;
+}
+
+.fotoabogado {
+    display: block;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+.fotoabogado1 {
+    display: block;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+.fotoabogado2 {
+    display: block;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+.fotoabogado3 {
+    display: block;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+.fotoabogado4 {
+    display: block;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+.fotoabogado5 {
+    display: block;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.Principal {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 50px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "seccion1 seccion1 seccion2 seccion2"
+        "seccion1 seccion1 seccion2 seccion2"
+        "seccion3 seccion3 seccion4 seccion4"
+        "seccion3 seccion3 seccion4 seccion4"
+        "footer footer footer footer";
+}
+
+.footer {
+    grid-area: footer;
+    display: inline-flex;
+    color: azure;
+    font-weight: bold;
+    padding-right: 50px;
+    background: rgb(56, 175, 199);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(56, 175, 199, 1)) 100%;
+}
+
+.cajas {
+    background: rgb(89, 159, 216);
+    margin: 5px;
+    padding: 5px;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.cajas:hover {
+    background: rgb(79, 228, 59);
+
+}
+
+.seccion1 {
+    grid-area: seccion1;
+    border: solid;
+    border-color: darkcyan;
+}
+
+.seccion2 {
+    grid-area: seccion2;
+    border: solid;
+    border-color: rgb(2, 0, 36);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.seccion3 {
+    grid-area: seccion3;
+    border: solid;
+    border-color: rgb(2, 0, 36);
+}
+
+.seccion4 {
+    grid-area: seccion4;
+    border: solid;
+    border-color: darkcyan;
+}
+
+/* Mixin */
+/*otro parametro $ iria adentro del mismo parentesis*/
+
+@mixin parrafo ($fondo, $letra) {
+    background-color: $fondo;
+    color: $letra;
+    border: solid;
+    border-color: darkcyan;
+    font-weight: bold;
+}
+
+.parrafo1 {
+    @include parrafo(rgb(177, 152, 235), whitesmoke)
+}
+
+.parrafo2 {
+    @include parrafo(cadetblue, whitesmoke)
+}
+
+.parrafo3 {
+    @include parrafo(rgb(216, 201, 224), black)
+}
+
+/* Animacion */
+
+.parrafo1:hover {
+    transform: translate(-200px);
+
+}
+
+.parrafo2:hover {
+    transform: translate(-200px);
+}
+
+.parrafo3:hover {
+    transform: translate(-200px);
+}
+
+.fotoabogado4:hover {
+    transform: translate(80px);
+}
+
+.fotoabogado5:hover {
+    transform: translate(-80px);
+}
+
+/*cliente*/
+
+.clientela {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 50px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "cliente clientes clientez clientex"
+        "cliente clientes clientez clientex"
+        "cliente clientes clientez clientex"
+        "footer footer footer footer";
+}
+
+
+.footer {
+    grid-area: footer;
+    border: solid;
+    border-color: darkcyan;
+}
+
+.cliente {
+    grid-area: cliente;
+    border: solid;
+    border-color: darkcyan;
+}
+
+.clientes {
+    grid-area: clientes;
+    border: solid;
+    border-color: darkcyan;
+}
+
+.clientez {
+    grid-area: clientez;
+    border: solid;
+    border-color: darkcyan;
+}
+
+.clientex {
+    grid-area: clientex;
+    border: solid;
+    border-color: darkcyan;
+}
+
+.textos {
+    padding: 10px;
+}
+
+/*contacto*/
+
+.contactate {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.2fr 50px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "formulario"
+        "footer";
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.formulario {
+    grid-area: formulario;
+
+    text-align: center;
+    background-color: rgb(25, 9, 100);
+    color: darkblue;
+}
+
+.formulario1 {
+    width: 320px;
+    height: 50px;
+    border: 4px solid rgb(25, 9, 100);
+    background-color: aliceblue;
+
+}
+
+.botoneta {
+    cursor: pointer;
+    margin-bottom: 15px;
+    background-color: gold;
+}
+
+/* equipo */
+
+.equipo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 50px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "doc1 ilustracion doc2"
+        "doc1 ilustracion doc2"
+        "doc1 ilustracion doc2"
+        "footer footer footer";
+}
+
+.footer {
+    grid-area: footer;
+    border: solid;
+    border-color: darkcyan;
+}
+
+.doc1 {
+    grid-area: doc1;
+    border: solid;
+    border-color: darkcyan;
+}
+
+.doc2 {
+    grid-area: doc2;
+    border: solid;
+    border-color: darkcyan;
+}
+
+.ilustracion {
+    grid-area: ilustracion;
+    border: solid;
+    border-color: darkcyan;
+}
+
+/*Responsive* en tamaño medio 768, se adapta*/
+
+@media (max-width: 768px) {
+
+    .ilustracion{display: none;}
+
+    .cajas:hover {
+        cursor: pointer;
+        background: rgb(79, 228, 59);
+}  }
+
+/*small tamaño 375*/
+/*nosotros y contacto y especialidades y index y clientes ok*/
+
+@media (max-width: 375px) {
+.menu{    background: cadetblue;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.clientela{
+    grid-template-areas:
+    "cliente cliente clientes clientes"
+    "cliente cliente clientes clientes"
+    "clientez clientez clientex clientex"
+    "clientez clientez clientex clientex"
+    "footer footer footer footer";
+}
+
+.Principal {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "seccion1"
+        "seccion2"
+        "seccion3"
+        "seccion4"
+        "footer";
+}
+
+}    
+
